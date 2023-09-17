@@ -1,0 +1,135 @@
+/* Global Styles */
+
+:root {
+  --bcg-color: #f2f2f2; /* Lighter background color */
+  --primary-color: #CBC3E3; /* Button color */
+  --secondary-color: 	#301934;
+  --border-color: 	#301934;
+  --border-radius: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* Utility Classes */
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bcg-color);
+  margin: 0; /* Remove default body margin */
+}
+
+.box {
+  background-color: var(--primary-color); /* Use primary color for the box background */
+  padding: 30px;
+  width: 100%; /* Make the box cover the entire viewport width */
+  max-width: 500px; /* Add a max-width for better readability on large screens */
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column; /* Center the contents vertically */
+  align-items: center; /* Center the contents horizontally */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a box shadow */
+  border: 2px solid var(--border-color); /* Add a border */
+}
+
+/* Header */
+
+.qr-header h1 {
+  font-size: 26px;
+  text-align: center;
+  color: var(--secondary-color);
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.qr-header input {
+  width: 100%;
+  margin-block: 12px;
+}
+
+.qr-header input,
+select {
+  padding: 12px;
+  border-radius: var(--border-radius);
+  font-size: 18px;
+  outline: none;
+  border: 2px solid var(--border-color);
+  width: 100%; /* Make the input and select fields cover the entire container */
+}
+
+.qr-header label {
+  color: var(--secondary-color);
+  font-size: 20px;
+}
+
+.select-container {
+  display: flex;
+  flex-direction: column; /* Display label and select vertically */
+}
+
+/* Body */
+
+.qr-body {
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  border: 2px solid var(--border-color); /* Add a border around the QR code */
+  border-radius: var(--border-radius);
+  margin-top: 20px; /* Add some spacing between the header and body */
+}
+
+.qr-body img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Footer */
+
+.qr-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px; /* Add some spacing between the body and footer */
+}
+
+button#generateBtn {
+  background-color: var(--primary-color); /* Use primary color for the button */
+  color: var(--secondary-color);
+  font-size: 20px;
+  padding: 14px 36px;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Add a transition effect */
+}
+
+button#generateBtn:hover {
+  background-color: 	#301934; /* Change button color on hover */
+  transform: scale(1.05); /* Add a pop-up effect on hover */
+}
+
+/* Style for the Download button */
+.qr-footer a#downloadBtn {
+  background-color: var(--primary-color); /* Use primary color for the button */
+  text-decoration: none;
+  font-size: 20px;
+  padding: 14px 36px;
+  color: var(--secondary-color);
+  font-weight: 600;
+  border-radius: var(--border-radius);
+  text-align: center;
+  transition: background-color 0.3s; /* Add a transition effect */
+  border: 2px solid var(--border-color);
+}
+
+.qr-footer a#downloadBtn:hover {
+  background-color: 	#301934; /* Change button color on hover */
+}
